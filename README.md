@@ -1,2 +1,2 @@
 - ```espflash board-info --no-stub```
-- ```cargo run -p esp32c6-app``
+- ```cargo run -p esp32c6-app```
