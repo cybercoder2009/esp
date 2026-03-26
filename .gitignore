@@ -1,0 +1,24 @@
+/app-ble-wifi
+/esp32p4
+
+# Rust
+**/target/
+**/*.rs.bk
+
+# React Native / Node
+**/node_modules/
+**/.npm
+**/package-lock.json
+
+# Android
+**/.gradle/
+**/build/
+**/*.apk
+**/*.aar
+**/*.keystore
+
+# System & IDE
+.DS_Store
+**/.vscode/
+**/.idea/
+**/*.log

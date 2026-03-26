@@ -1,0 +1,12 @@
+[package]
+name = "esp32c6-app"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+esp-hal = { version = "1.0.0", features = ["esp32c6", "unstable"] }
+esp-backtrace = { version = "0.18.1", features = ["esp32c6", "panic-handler", "println"] }
+esp-println = { version = "0.16.1", features = ["esp32c6"] }
+esp-bootloader-esp-idf = { version = "0.4.0", features = ["esp32c6"] }
+esp-hal-smartled = { git = "https://github.com/esp-rs/esp-hal-community", package = "esp-hal-smartled" }
+smart-leds = { version = "0.4.0" }

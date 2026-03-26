@@ -1,0 +1,28 @@
+# --- ESP32-C6 (RISC-V) ---
+[target.riscv32imac-unknown-none-elf]
+runner = "espflash flash --no-stub --monitor"
+rustflags = [
+    "-C", "link-arg=-Tlinkall.x",
+]
+
+# --- ESP32-P4 no-std ---
+[target.riscv32imafc-unknown-none-elf]
+runner = "espflash flash --monitor"
+
+# --- ESP32-P4 std (ESP-IDF) ---
+[target.riscv32imafc-esp-espidf]
+linker = "ldproxy"
+runner = "espflash flash --no-stub --monitor"
+rustflags = [
+    "--cfg", "espidf_time64",
+]
+
+[build]
+# Default to C6
+target = "riscv32imac-unknown-none-elf"
+
+[unstable]
+build-std = ["core"]
+
+[env]
+ESP_LOG = "INFO"
